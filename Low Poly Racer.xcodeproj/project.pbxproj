@@ -10,6 +10,7 @@
 		203BF9AD1F28A205004A3D2F /* GameOverLay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BF9AC1F28A205004A3D2F /* GameOverLay.swift */; };
 		203BF9AF1F28A6F5004A3D2F /* Map2.scn in Resources */ = {isa = PBXBuildFile; fileRef = 203BF9AE1F28A6F5004A3D2F /* Map2.scn */; };
 		203BF9B11F28A6FD004A3D2F /* Map3.scn in Resources */ = {isa = PBXBuildFile; fileRef = 203BF9B01F28A6FD004A3D2F /* Map3.scn */; };
+		203BF9B41F28FCB4004A3D2F /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BF9B31F28FCB4004A3D2F /* Car.swift */; };
 		204880191F288F1400A97070 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 204DBB071F288C370023A9BA /* SceneKit.framework */; };
 		2048801A1F288F1900A97070 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 204DBB091F288C470023A9BA /* CoreData.framework */; };
 		206F356C1F2890610089764C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 206F356B1F2890610089764C /* art.scnassets */; };
@@ -58,6 +59,7 @@
 		203BF9AC1F28A205004A3D2F /* GameOverLay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverLay.swift; sourceTree = "<group>"; };
 		203BF9AE1F28A6F5004A3D2F /* Map2.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Map2.scn; sourceTree = "<group>"; };
 		203BF9B01F28A6FD004A3D2F /* Map3.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Map3.scn; sourceTree = "<group>"; };
+		203BF9B31F28FCB4004A3D2F /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		204DBB071F288C370023A9BA /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		204DBB091F288C470023A9BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		206F356B1F2890610089764C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		203BF9B21F28FCA5004A3D2F /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				203BF9B31F28FCB4004A3D2F /* Car.swift */,
+			);
+			name = Car;
+			sourceTree = "<group>";
+		};
 		204DBB061F288C370023A9BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,10 +211,10 @@
 			children = (
 				206F356B1F2890610089764C /* art.scnassets */,
 				208BB4711F286E4500B12943 /* Assets.xcassets */,
-				208BB46E1F286E4500B12943 /* Low_Poly_Racer.xcdatamodeld */,
 				208BB4A21F28717000B12943 /* Button.swift */,
 				208BB4B21F28837B00B12943 /* Enums.swift */,
 				208BB4B41F28841600B12943 /* StoredInformation.swift */,
+				208BB46E1F286E4500B12943 /* Low_Poly_Racer.xcdatamodeld */,
 				208BB4761F286E4500B12943 /* Info.plist */,
 			);
 			name = Utilities;
@@ -257,6 +267,7 @@
 				20C6F90C1F28862300D6A2A1 /* GameViewController.swift */,
 				20B287BE1F289ACD008EC13E /* GameOverLay.sks */,
 				203BF9AC1F28A205004A3D2F /* GameOverLay.swift */,
+				203BF9B21F28FCA5004A3D2F /* Car */,
 				206F356D1F2898A50089764C /* Maps */,
 			);
 			name = GameScene;
@@ -419,6 +430,7 @@
 				208BB4A81F28732D00B12943 /* PlayMenu.swift in Sources */,
 				208BB4681F286E4500B12943 /* AppDelegate.swift in Sources */,
 				203BF9AD1F28A205004A3D2F /* GameOverLay.swift in Sources */,
+				203BF9B41F28FCB4004A3D2F /* Car.swift in Sources */,
 				208BB4A61F28732700B12943 /* PlayMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

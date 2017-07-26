@@ -14,7 +14,6 @@ class GameOverLay: SKScene {
     
     override func didMove(to view: SKView) {
         backButton = self.childNode(withName: "BackButton") as? Button
-        backButton?.isUserInteractionEnabled = true
         backButton?.playAction = { [weak self] in
             self?.gameViewController?.gameToPlay()
         }

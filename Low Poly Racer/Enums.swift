@@ -8,6 +8,11 @@
 
 import Foundation
 
+
+enum gameState{
+    case isLaunched, isStarting, isPlaying, isEnding, isRestarting
+}
+
 enum Maps : String{
     case Map1, Map2, Map3
 }
