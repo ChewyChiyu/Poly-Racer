@@ -17,6 +17,6 @@ enum Maps : String{
     case Map1, Map2, Map3
 }
 
-enum Cars{
+enum Cars : String{
     case basic
 }

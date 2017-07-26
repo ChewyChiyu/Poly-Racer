@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		202008541F2930A000306284 /* basic.scn in Resources */ = {isa = PBXBuildFile; fileRef = 202008531F2930A000306284 /* basic.scn */; };
 		203BF9AD1F28A205004A3D2F /* GameOverLay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BF9AC1F28A205004A3D2F /* GameOverLay.swift */; };
 		203BF9AF1F28A6F5004A3D2F /* Map2.scn in Resources */ = {isa = PBXBuildFile; fileRef = 203BF9AE1F28A6F5004A3D2F /* Map2.scn */; };
 		203BF9B11F28A6FD004A3D2F /* Map3.scn in Resources */ = {isa = PBXBuildFile; fileRef = 203BF9B01F28A6FD004A3D2F /* Map3.scn */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		202008531F2930A000306284 /* basic.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = basic.scn; sourceTree = "<group>"; };
 		203BF9AC1F28A205004A3D2F /* GameOverLay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverLay.swift; sourceTree = "<group>"; };
 		203BF9AE1F28A6F5004A3D2F /* Map2.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Map2.scn; sourceTree = "<group>"; };
 		203BF9B01F28A6FD004A3D2F /* Map3.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Map3.scn; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				203BF9B31F28FCB4004A3D2F /* Car.swift */,
+				202008531F2930A000306284 /* basic.scn */,
 			);
 			name = Car;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				208BB46D1F286E4500B12943 /* Main.storyboard in Resources */,
 				203BF9AF1F28A6F5004A3D2F /* Map2.scn in Resources */,
 				208BB4A11F286FCC00B12943 /* LaunchScene.sks in Resources */,
+				202008541F2930A000306284 /* basic.scn in Resources */,
 				208BB4B11F287E3300B12943 /* ShopScene.sks in Resources */,
 				208BB4AA1F28733700B12943 /* PlayMenu.sks in Resources */,
 			);

@@ -15,14 +15,16 @@ class Car : SCNNode{
     
     override init(){
         super.init()
-        let carShape = SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0)
-        self.geometry = carShape
-        self.geometry?.materials.first?.diffuse.contents = UIColor.red
+        let carScene = SCNScene(named: "\(StoredInformation.info.currentCar.rawValue ).scn")
+        for carPart in (carScene?.rootNode.childNodes)!{
+            carPart.removeFromParentNode()
+            self.addChildNode(carPart)
+        }
         addPhysicsBody()
     }
-
+    
     func addPhysicsBody(){
-        self.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(geometry: self.geometry!, options: nil))
+        self.physicsBody =  SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: self, options: [SCNPhysicsShape.Option.type:SCNPhysicsShape.ShapeType.convexHull]))
         self.physicsBody?.isAffectedByGravity = false
         self.physicsBody?.angularDamping = 0.4
         self.physicsBody?.damping = 0.4

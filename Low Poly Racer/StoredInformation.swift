@@ -11,7 +11,7 @@ import Foundation
 struct StoredInformation{
     
     static var info = StoredInformation()
-    var currentCar : Cars?
+    var currentCar : Cars = .basic
     var currentMap: Maps?
     
     
