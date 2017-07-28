@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		202008541F2930A000306284 /* basic.scn in Resources */ = {isa = PBXBuildFile; fileRef = 202008531F2930A000306284 /* basic.scn */; };
+		202008991F2ACED600306284 /* Map1_FormationA.scn in Resources */ = {isa = PBXBuildFile; fileRef = 202008981F2ACED600306284 /* Map1_FormationA.scn */; };
 		203BF9AD1F28A205004A3D2F /* GameOverLay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BF9AC1F28A205004A3D2F /* GameOverLay.swift */; };
 		203BF9AF1F28A6F5004A3D2F /* Map2.scn in Resources */ = {isa = PBXBuildFile; fileRef = 203BF9AE1F28A6F5004A3D2F /* Map2.scn */; };
 		203BF9B11F28A6FD004A3D2F /* Map3.scn in Resources */ = {isa = PBXBuildFile; fileRef = 203BF9B01F28A6FD004A3D2F /* Map3.scn */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		202008531F2930A000306284 /* basic.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = basic.scn; sourceTree = "<group>"; };
+		202008981F2ACED600306284 /* Map1_FormationA.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Map1_FormationA.scn; sourceTree = "<group>"; };
 		203BF9AC1F28A205004A3D2F /* GameOverLay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverLay.swift; sourceTree = "<group>"; };
 		203BF9AE1F28A6F5004A3D2F /* Map2.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Map2.scn; sourceTree = "<group>"; };
 		203BF9B01F28A6FD004A3D2F /* Map3.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Map3.scn; sourceTree = "<group>"; };
@@ -122,6 +124,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		202008971F2ACEBD00306284 /* Map1 */ = {
+			isa = PBXGroup;
+			children = (
+				206F356E1F2898B60089764C /* Map1.scn */,
+				202008981F2ACED600306284 /* Map1_FormationA.scn */,
+			);
+			name = Map1;
+			sourceTree = "<group>";
+		};
+		2020089A1F2AE02D00306284 /* Map2 */ = {
+			isa = PBXGroup;
+			children = (
+				203BF9AE1F28A6F5004A3D2F /* Map2.scn */,
+			);
+			name = Map2;
+			sourceTree = "<group>";
+		};
+		2020089B1F2AE03200306284 /* Map3 */ = {
+			isa = PBXGroup;
+			children = (
+				203BF9B01F28A6FD004A3D2F /* Map3.scn */,
+			);
+			name = Map3;
+			sourceTree = "<group>";
+		};
 		203BF9B21F28FCA5004A3D2F /* Car */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,9 +170,9 @@
 		206F356D1F2898A50089764C /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				206F356E1F2898B60089764C /* Map1.scn */,
-				203BF9AE1F28A6F5004A3D2F /* Map2.scn */,
-				203BF9B01F28A6FD004A3D2F /* Map3.scn */,
+				202008971F2ACEBD00306284 /* Map1 */,
+				2020089A1F2AE02D00306284 /* Map2 */,
+				2020089B1F2AE03200306284 /* Map3 */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -395,6 +422,7 @@
 				208BB46D1F286E4500B12943 /* Main.storyboard in Resources */,
 				203BF9AF1F28A6F5004A3D2F /* Map2.scn in Resources */,
 				208BB4A11F286FCC00B12943 /* LaunchScene.sks in Resources */,
+				202008991F2ACED600306284 /* Map1_FormationA.scn in Resources */,
 				202008541F2930A000306284 /* basic.scn in Resources */,
 				208BB4B11F287E3300B12943 /* ShopScene.sks in Resources */,
 				208BB4AA1F28733700B12943 /* PlayMenu.sks in Resources */,

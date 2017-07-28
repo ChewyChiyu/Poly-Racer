@@ -17,6 +17,11 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate{
     var gameCamera: SCNNode?
     var car: Car?
     var primaryTouch = CGPoint.zero
+    var numOfFormations = 0
+    var mapFormationFirst = SCNNode()
+    var mapFormationSecond = SCNNode()
+    var mapFormations = [SCNNode(), SCNNode(), SCNNode(), SCNNode()]
+    let formationLength = 110 // 10 block buffer
     
     var state: gameState = .isLaunched{
         didSet{
@@ -50,15 +55,22 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate{
     func loadSceneAndView(){
         gameView = self.view as? SCNView!
         gameScene = SCNScene(named: "\(StoredInformation.info.currentMap?.rawValue ?? "").scn")
+        if (StoredInformation.info.currentMap?.rawValue == "Map1"){
+            gameScene?.background.contents = UIColor(colorLiteralRed: 48/255, green: 17/255, blue: 102/255, alpha: 1)
+        }
         gameView?.scene = gameScene
         gameView?.showsStatistics = true
         //gameView?.allowsCameraControl = true
         gameView?.autoenablesDefaultLighting = false
+        gameView?.debugOptions = SCNDebugOptions.showPhysicsShapes
         gameView?.isPlaying = true
         gameView?.delegate = self
         gameCamera = gameScene?.rootNode.childNode(withName: "camera", recursively: true)
         car = Car()
         gameScene?.rootNode.addChildNode(car!)
+        for index in 0..<mapFormations.count{
+            newMapFormation(index: index)
+        }
         changeStateTo(newState: .isLaunched)
     }
     
@@ -66,6 +78,51 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate{
         if(state == .isPlaying){
             lockCameraOnNode(node: car!)
             car?.applyThrust()
+            manageMapGeneration()
+        }
+    }
+    
+    func newMapFormation(index: Int){
+        mapFormations[index] = getRandomMapFormation()
+        gameScene?.rootNode.addChildNode(mapFormations[index])
+    }
+    
+    func getRandomMapFormation() -> SCNNode{
+        var formationName = String()
+        formationName = "_FormationA.scn"
+        let sceneFormationName = "\(StoredInformation.info.currentMap?.rawValue ?? "")\(formationName)"
+        let randomFormation = SCNScene(named: sceneFormationName)
+        let newNode = SCNNode()
+        for randPart in (randomFormation?.rootNode.childNodes)!{
+            randPart.removeFromParentNode()
+            newNode.addChildNode(randPart)
+            randPart.position.z -= Float(numOfFormations * formationLength)
+        }
+        numOfFormations += 1
+        return newNode
+    }
+    
+    
+    func manageMapGeneration(){
+        checkForNodeRemoval()
+        checkForNewFormation()
+    }
+    
+    func checkForNewFormation(){
+        for index in 0..<mapFormations.count{
+            if(mapFormations[index].childNodes.count <= 0){
+                newMapFormation(index: index)
+            }
+        }
+    }
+    
+    func checkForNodeRemoval(){
+        for map in mapFormations{
+            for mapPart in (map.childNodes){
+                if (mapPart.position.z > (car?.presentation.position.z)! + 10){
+                    mapPart.removeFromParentNode()
+                }
+            }
         }
     }
     

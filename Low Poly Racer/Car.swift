@@ -43,7 +43,7 @@ class Car : SCNNode{
         guard shouldThrust == true else {return}
         let vectorNew = getZForward(node: self.presentation)
         self.position = self.presentation.position
-        self.physicsBody?.applyForce(SCNVector3(-vectorNew.x*0.1,0,-vectorNew.z*0.1), asImpulse: true)
+        self.physicsBody?.applyForce(SCNVector3(-vectorNew.x*0.3,0,-vectorNew.z*0.3), asImpulse: true)
         self.position = self.presentation.position
     }
     
